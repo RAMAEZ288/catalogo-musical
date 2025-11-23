@@ -31,4 +31,4 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 EXPOSE 9000
 
 # Comando que arranca el servidor (para Railway)
-CMD ["php", "-S", "0.0.0.0:9000", "-t", "public"]
+CMD ["sh","-c","php artisan config:cache || true && php artisan storage:link || true && php -S 0.0.0.0:$PORT -t public"]
