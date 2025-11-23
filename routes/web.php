@@ -10,9 +10,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+# Redirigir la raíz a /index (si prefieres que / muestre la vista inicio, cambia esto)
+Route::redirect('/', '/index');
 
 Route::view('/index', 'inicio');
 Route::view('/contacto', 'contacto');
