@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* --- utilidades necesarias para effects.js (añadidas manualmente) --- */
+
+/* scale-105 */
+.scale-105 {
+  transform: scale(1.05) !important;
+}
+
+/* shadow-2xl (aprox) */
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25) !important;
+}
+
+/* rotate-3 (aprox) */
+.rotate-3 { transform: rotate(3deg) !important; }
+
+/* translate-y-1 (aprox to 0.25rem) */
+.translate-y-1 { transform: translateY(0.25rem) !important; }
+
+/* ring + ring-offset fallback (simple) */
+.ring { box-shadow: 0 0 0 3px rgba(99,102,241,0.25) !important; }
+.ring-offset-2 { /* fallback visual, nada necesario */ }
+
+/* bg indigo tones (en caso de que no existan) */
+.bg-indigo-600 { background-color: #4f46e5 !important; }
+.bg-indigo-700 { background-color: #4338ca !important; }
+
+/* transiciones */
+.transition { transition: all .2s ease !important; }
+.duration-300 { transition-duration: .3s !important; }
+.duration-200 { transition-duration: .2s !important; }
+
+/* asegurar que transform y rotate se puedan combinar visualmente */
+.effect-card, .effect-image { will-change: transform; }
